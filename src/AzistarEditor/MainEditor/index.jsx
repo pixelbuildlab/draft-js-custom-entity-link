@@ -12,28 +12,26 @@ const DraftEditor = ({ onEditorChange, editorState, setEditorState }) => {
     }
     return false
   }
+
   const addEntity = () => {
     const contentState = editorState.getCurrentContent()
 
-    // Create the "ENTITY" with its metadata
     const contentStateWithEntity = contentState.createEntity(
-      'OUTSIDE_ENTITY', // Entity type
-      'IMMUTABLE', // Mutability
-      { color: 'red' } // Entity data
+      'AZISTAR_ENTITY',
+      'IMMUTABLE',
+      { type: 'STRING', sample: 'Hello' }
     )
 
     const entityKey = contentStateWithEntity.getLastCreatedEntityKey()
 
-    // Insert the entity text into the content
     const newContentState = Modifier.insertText(
       contentStateWithEntity,
       editorState.getSelection(),
-      'outside entity', // The text that will be displayed
-      null, // No inline style applied here
-      entityKey // The entity key for the text
+      'azistarVariable',
+      null,
+      entityKey
     )
 
-    // Push the new content state with the entity to the editor
     const newEditorState = EditorState.push(
       editorState,
       newContentState,
@@ -58,7 +56,7 @@ const DraftEditor = ({ onEditorChange, editorState, setEditorState }) => {
         editorState={editorState}
         setEditorState={setEditorState}
       />
-      <button onClick={addEntity}>Add Outside Entity</button> {/* New Button */}
+      <button onClick={addEntity}>Add Outside Entity</button>
     </div>
   )
 }

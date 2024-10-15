@@ -1,8 +1,8 @@
 import React from 'react'
 import { EditorState, convertToRaw, convertFromRaw } from 'draft-js'
+import './DraftEditor.css'
 import DraftEditor from './MainEditor'
 import { initialBlocks } from './MainEditor/Helpers/initialBlocks'
-import './DraftEditor.css'
 
 const AzistarEditor = () => {
   const [editorState, setEditorState] = React.useState(

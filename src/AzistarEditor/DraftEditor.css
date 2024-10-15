@@ -42,7 +42,7 @@ button {
 .superFancyBlockquote {
   color: #999;
   background: #fff;
-  font-family: "Hoefler Text", Georgia, serif;
+  font-family: 'Hoefler Text', Georgia, serif;
   font-style: italic;
   border-left: 2px solid #999;
   padding-left: 10px;
@@ -71,4 +71,10 @@ button {
 }
 .justifyAlign {
   text-align: justify;
+}
+.custom-entity {
+  color: #d24dff;
+  background-color: #f5e1ff;
+  padding: 2px 5px;
+  border-radius: 3px;
 }
