@@ -8,6 +8,9 @@ export const styleMap = {
   HIGHLIGHT: {
     backgroundColor: '#F7A5F7',
   },
+  VAR: {
+    backgroundColor: 'red',
+  },
   UPPERCASE: {
     textTransform: 'uppercase',
   },
@@ -35,7 +38,6 @@ export const styleMap = {
 
 export const myBlockStyleFn = (contentBlock) => {
   const type = contentBlock.getType()
-  console.log(type, contentBlock)
   switch (type) {
     case 'blockQuote':
       return 'superFancyBlockquote'
